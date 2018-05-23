@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.props" Condition="Exists('$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5A6F94DC-2C51-4734-B1FA-0A1376614AD6}</ProjectGuid>
+    <Description>BST Packaged XLabs.Serialization.ServiceStack</Description>
+    <PackageId>BST.XLabs.Serialization.ServiceStack</PackageId>
+    <PackageVersion>1.0.0</PackageVersion>
+    <Authors>BST Global</Authors>
+    <DevelopmentDependency>false</DevelopmentDependency>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>BST.XLabs.Serialization.ServiceStack</RootNamespace>
+    <UsePartialTypes>false</UsePartialTypes>
+    <AssemblyName>BST.XLabs.Serialization.ServiceStack</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <OutputPath>bin\Debug</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="readme.txt">
+      <IncludeInPackage>true</IncludeInPackage>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\XLabs.Serialization.ServiceStack.Droid\XLabs.Serialization.ServiceStackV3.Droid.csproj">
+      <Project>{480A3B69-7110-400A-B06B-9F9E648D61E9}</Project>
+      <Name>XLabs.Serialization.ServiceStackV3.Droid</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XLabs.Serialization.ServiceStack.iOS\XLabs.Serialization.ServiceStackV3.iOS.csproj">
+      <Project>{C8105E62-05B2-4301-BDD0-A0EAA21F3564}</Project>
+      <Name>XLabs.Serialization.ServiceStackV3.iOS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BST.XLabs.Serialization\BST.XLabs.Serialization.nuproj">
+      <Project>{D0C2969B-BBEC-4964-A9EE-360994FCEF8A}</Project>
+      <Name>BST.XLabs.Serialization</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="NuGet.Build.Packaging">
+      <Version>0.2.2</Version>
+      <PrivateAssets>All</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.Common.targets" />
+  <Import Project="$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.targets" Condition="Exists('$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.targets')" />
+</Project>

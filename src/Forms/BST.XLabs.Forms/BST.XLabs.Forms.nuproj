@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.props" Condition="Exists('$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{763FF759-34CE-415B-A8E2-ACF69AE81EED}</ProjectGuid>
+    <Description>BST Packaged XLabs.Forms</Description>
+    <PackageId>BST.XLabs.Forms</PackageId>
+    <PackageVersion>1.0.0</PackageVersion>
+    <Authors>BSTGlobal</Authors>
+    <DevelopmentDependency>false</DevelopmentDependency>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>BST.XLabs.Forms</RootNamespace>
+    <UsePartialTypes>false</UsePartialTypes>
+    <AssemblyName>BST.XLabs.Forms</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <OutputPath>bin\Debug</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="readme.txt">
+      <IncludeInPackage>true</IncludeInPackage>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\XLabs.Forms\XLabs.Forms.csproj">
+      <Project>{59AD9D73-9348-4262-A869-6168057DA26A}</Project>
+      <Name>XLabs.Forms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XLabs.Forms.Droid\XLabs.Forms.Droid.csproj">
+      <Project>{3FDEEE8A-55E3-42E9-91AF-FBF94688CE71}</Project>
+      <Name>XLabs.Forms.Droid</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XLabs.Forms.iOS\XLabs.Forms.iOS.csproj">
+      <Project>{5F75F28C-0E83-4594-97F1-9CDF806DB5F2}</Project>
+      <Name>XLabs.Forms.iOS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\BST.XLabs.Core\BST.XLabs.Core.nuproj">
+      <Project>{F582A961-A040-4EB4-B17F-93E895284154}</Project>
+      <Name>BST.XLabs.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\IOC\XLabs.IOC\BST.XLabs.IOC\BST.XLabs.IOC.nuproj">
+      <Project>{8C8DD704-01A2-49BF-8436-72ED416AC2E9}</Project>
+      <Name>BST.XLabs.IOC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Platform\BST.XLabs.Platform\BST.XLabs.Platform.nuproj">
+      <Project>{924C5B3D-ACDA-420B-A37B-B8DD91E7CA1C}</Project>
+      <Name>BST.XLabs.Platform</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Serialization\BST.XLabs.Serialization\BST.XLabs.Serialization.nuproj">
+      <Project>{D0C2969B-BBEC-4964-A9EE-360994FCEF8A}</Project>
+      <Name>BST.XLabs.Serialization</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="NuGet.Build.Packaging">
+      <Version>0.2.2</Version>
+      <PrivateAssets>All</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.Common.targets" />
+  <Import Project="$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.targets" Condition="Exists('$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.targets')" />
+</Project>
