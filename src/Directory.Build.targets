@@ -1,5 +1,5 @@
 <Project>
-  <Target Name="PublishPackages" AfterTargets="AfterBuild" Condition="'$(ProjectExt)' == '.nuproj'">
+  <Target Name="PublishPackages" AfterTargets="AfterBuild" Condition="'$(ProjectExt)' == '.nuproj' and Exists('$(TargetPath)')">
     <Copy
         SourceFiles="$(TargetPath)"
         SkipUnchangedFiles="true"
