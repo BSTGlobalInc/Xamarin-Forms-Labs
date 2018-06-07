@@ -1,0 +1,9 @@
+<Project>
+  <Target Name="PublishPackages" AfterTargets="AfterBuild" Condition="'$(ProjectExt)' == '.nuproj'">
+    <Copy
+        SourceFiles="$(TargetPath)"
+        SkipUnchangedFiles="true"
+        DestinationFolder="$(LocalNuGetRepository)"
+        />
+  </Target>
+</Project>

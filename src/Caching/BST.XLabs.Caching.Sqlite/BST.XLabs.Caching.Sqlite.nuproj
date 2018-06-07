@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.props" Condition="Exists('$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -7,8 +7,6 @@
     <ProjectGuid>{66C43DD5-78A9-4402-A39E-C0E3C9A5A1A4}</ProjectGuid>
     <Description>BST Packaged XLabs.Caching.Sqlite</Description>
     <PackageId>BST.XLabs.Caching.Sqlite</PackageId>
-    <PackageVersion>1.0.0</PackageVersion>
-    <Authors>BST Global</Authors>
     <DevelopmentDependency>false</DevelopmentDependency>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <OutputType>Exe</OutputType>
@@ -28,11 +26,6 @@
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
   <ItemGroup>
-    <None Include="readme.txt">
-      <IncludeInPackage>true</IncludeInPackage>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\XLabs.Caching.Sqlite\XLabs.Caching.Sqlite.csproj">
       <Project>{B42F3CE5-DC7C-4EF0-8712-ED810CEFDA11}</Project>
       <Name>XLabs.Caching.Sqlite</Name>
@@ -47,8 +40,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="NuGet.Build.Packaging">
-      <Version>0.2.2</Version>
+    <PackageReference Include="NuGet.Build.Packaging" Version="0.2.2">
       <PrivateAssets>All</PrivateAssets>
     </PackageReference>
   </ItemGroup>

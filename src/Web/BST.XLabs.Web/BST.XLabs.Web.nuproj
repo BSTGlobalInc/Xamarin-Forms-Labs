@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.props" Condition="Exists('$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -7,8 +7,6 @@
     <ProjectGuid>{1F95D732-3891-4222-873A-A200A9057B8D}</ProjectGuid>
     <Description>BST Packaged XLabs.Web</Description>
     <PackageId>BST.XLabs.Web</PackageId>
-    <PackageVersion>1.0.0</PackageVersion>
-    <Authors>BST Global</Authors>
     <DevelopmentDependency>false</DevelopmentDependency>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <OutputType>Exe</OutputType>
@@ -28,29 +26,15 @@
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
   <ItemGroup>
-    <None Include="readme.txt">
-      <IncludeInPackage>true</IncludeInPackage>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="NuGet.Build.Packaging">
-      <Version>0.2.2</Version>
-      <PrivateAssets>All</PrivateAssets>
-    </PackageReference>
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\XLabs.Web\XLabs.Web.csproj">
       <Project>{F9F8EC0B-D46D-40EC-BABF-F9D499CE451A}</Project>
       <Name>XLabs.Web</Name>
     </ProjectReference>
-    <ProjectReference Include="..\XLabs.Web.Droid\XLabs.Web.Droid.csproj">
-      <Project>{1704EB24-5FBA-4E98-9CD4-EE2EE4610A94}</Project>
-      <Name>XLabs.Web.Droid</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\XLabs.Web.iOS\XLabs.Web.iOS.csproj">
-      <Project>{AFF1BB25-E9DB-4797-8778-F3EE09C8B9EF}</Project>
-      <Name>XLabs.Web.iOS</Name>
-    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="NuGet.Build.Packaging" Version="0.2.2">
+      <PrivateAssets>All</PrivateAssets>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.Common.targets" />
   <Import Project="$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.targets" Condition="Exists('$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.targets')" />

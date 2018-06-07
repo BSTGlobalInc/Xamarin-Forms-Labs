@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.props" Condition="Exists('$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -7,8 +7,6 @@
     <ProjectGuid>{D0C2969B-BBEC-4964-A9EE-360994FCEF8A}</ProjectGuid>
     <Description>BST Packaged XLabs.Serialization</Description>
     <PackageId>BST.XLabs.Serialization</PackageId>
-    <PackageVersion>1.0.0</PackageVersion>
-    <Authors>BST Global</Authors>
     <DevelopmentDependency>false</DevelopmentDependency>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <OutputType>Exe</OutputType>
@@ -28,19 +26,13 @@
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
   <ItemGroup>
-    <None Include="readme.txt">
-      <IncludeInPackage>true</IncludeInPackage>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\XLabs.Serialization\XLabs.Serialization.csproj">
       <Project>{6C5C17D3-E6E8-4201-B11F-7C50B02E8E3D}</Project>
       <Name>XLabs.Serialization</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="NuGet.Build.Packaging">
-      <Version>0.2.2</Version>
+    <PackageReference Include="NuGet.Build.Packaging" Version="0.2.2">
       <PrivateAssets>All</PrivateAssets>
     </PackageReference>
   </ItemGroup>

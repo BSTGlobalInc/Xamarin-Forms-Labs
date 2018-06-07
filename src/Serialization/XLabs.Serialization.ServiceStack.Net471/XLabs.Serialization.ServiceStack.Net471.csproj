@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <!--TargetFrameworkProfile>Profile111</TargetFrameworkProfile-->
+    <TargetFramework>net471</TargetFramework>
+    <AssemblyName>XLabs.Serialization.ServiceStack</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\XLabs.Serialization\XLabs.Serialization.csproj">
+      <Project>{6c5c17d3-e6e8-4201-b11f-7c50b02e8e3d}</Project>
+      <Name>XLabs.Serialization</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Data.Linq" />
+  </ItemGroup>
+  <Import Project="..\XLabs.Serialization.ServiceStack.Shared\XLabs.Serialization.ServiceStack.Shared.projitems" Label="Shared" />
+</Project>

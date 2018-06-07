@@ -21,7 +21,6 @@
 
 using System;
 using System.IO;
-using ExifLib;
 
 namespace XLabs.Platform.Services.Media
 {
@@ -118,27 +117,6 @@ namespace XLabs.Platform.Services.Media
 			}
 		}
 
-		/// <summary>
-		/// Gets the exif.
-		/// </summary>
-		/// <value>The exif.</value>
-		/// <exception cref="System.ObjectDisposedException">null</exception>
-		public JpegInfo Exif
-		{
-			get
-			{
-				if (_isDisposed)
-				{
-					throw new ObjectDisposedException(null);
-				}
-
-				var result = ExifReader.ReadJpeg(Source);
-
-				Source.Seek(0, SeekOrigin.Begin);
-
-				return result;
-			}
-		}
 		#endregion Public Properties
 
 		#region Public Methods

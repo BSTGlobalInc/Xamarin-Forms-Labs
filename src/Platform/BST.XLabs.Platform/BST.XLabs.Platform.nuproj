@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.props" Condition="Exists('$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -7,8 +7,6 @@
     <ProjectGuid>{924C5B3D-ACDA-420B-A37B-B8DD91E7CA1C}</ProjectGuid>
     <Description>BST Packaged XLabs.Platform</Description>
     <PackageId>BST.XLabs.Platform</PackageId>
-    <PackageVersion>1.0.0</PackageVersion>
-    <Authors>BST Global</Authors>
     <DevelopmentDependency>false</DevelopmentDependency>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <OutputType>Exe</OutputType>
@@ -28,11 +26,6 @@
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
   <ItemGroup>
-    <None Include="readme.txt">
-      <IncludeInPackage>true</IncludeInPackage>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\XLabs.Platform\XLabs.Platform.csproj">
       <Project>{7B43B9F5-7C88-42F1-B217-34A24AE925D0}</Project>
       <Name>XLabs.Platform</Name>
@@ -51,8 +44,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="NuGet.Build.Packaging">
-      <Version>0.2.2</Version>
+    <PackageReference Include="NuGet.Build.Packaging" Version="0.2.2">
       <PrivateAssets>All</PrivateAssets>
     </PackageReference>
   </ItemGroup>

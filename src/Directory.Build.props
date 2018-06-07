@@ -1,0 +1,15 @@
+<Project>
+  <PropertyGroup>
+    <Company>XLabs Team and BST Global</Company>
+    <Version>3.0.0.0</Version>
+    <FileVersion>3.0.0.0</FileVersion>
+    <PackageVersion>3.0.0.0</PackageVersion>
+    <Product>XLabs</Product>
+    <Authors>XLabs Team and BST Global</Authors>
+    <LocalNuGetRepository>C:\Packages\</LocalNuGetRepository>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="NuGet.Build.Packaging" Version="0.2.2" />
+  </ItemGroup>
+  <Import Project="$(MSBuildThisFileDirectory)Directory.LocalOverrides.props" Condition="Exists('$(MSBuildThisFileDirectory)Directory.LocalOverrides.props')" />
+</Project>
