@@ -1,9 +1,10 @@
 <Project>
   <PropertyGroup>
     <Company>XLabs Team and BST Global</Company>
+    <BranchBaseVersion Condition="'$(BranchBaseVersion)' == ''">3.0.0</BranchBaseVersion>
     <Version>3.0.0.0</Version>
     <FileVersion>3.0.0.0</FileVersion>
-    <PackageVersion>3.0.0.0</PackageVersion>
+    <PackageVersion Condition="'$(PackageVersion)' == ''">$(BranchBaseVersion).0</PackageVersion>
     <Product>XLabs</Product>
     <Authors>XLabs Team and BST Global</Authors>
     <LocalNuGetRepository>C:\Packages\</LocalNuGetRepository>
