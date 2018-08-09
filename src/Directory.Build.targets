@@ -1,0 +1,44 @@
+<Project>
+  <Target Name="PublishPackages" AfterTargets="Pack" Condition="Exists('$(OutputPath)..\$(PackageId).$(PackageVersion).nupkg') and '$(RunInTeamCity)' != 'True'">
+    <Copy
+        SourceFiles="$(OutputPath)..\$(PackageId).$(PackageVersion).nupkg"
+        SkipUnchangedFiles="true"
+        DestinationFolder="$(LocalNuGetRepository)"
+        />
+  </Target>
+  <UsingTask TaskName="IncrementLatestPackageBuild"
+           TaskFactory="CodeTaskFactory"
+           AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.Core.dll">
+    <ParameterGroup>
+      <NewBuild ParameterType="System.String" Output="true" />
+      <BaseVersion ParameterType="System.String" Required="true" />
+      <PackagePrefix ParameterType="System.String" Required="true" />
+      <PackagePath ParameterType="System.String" Required="true" />
+    </ParameterGroup>
+    <Task>
+      <Code Type="Fragment" Language="cs">
+        <![CDATA[ 
+
+NewBuild = BaseVersion + "." + (
+  (
+    Math.Max(
+      Directory.EnumerateFiles(PackagePath, PackagePrefix + "*." + BaseVersion + "*.nupkg", SearchOption.TopDirectoryOnly)
+      .Select(f => Path.GetFileNameWithoutExtension(f))
+      .Select(f => int.Parse(f.Substring(f.LastIndexOf(".") + 1)))
+      .OrderByDescending(v => v)
+      .FirstOrDefault()
+    , 4999) // Max vs 4999 ensures we don't use a number less than 5000 (like 0, if the above search finds none)
+  ) + 1).ToString();
+
+]]>
+      </Code>
+    </Task>
+  </UsingTask>
+
+  <Target Name="DeterminePackageVersion" BeforeTargets="GenerateNuspec" Condition="'$(RunInTeamCity)' != 'True'">
+    <IncrementLatestPackageBuild BaseVersion="$(BranchBaseVersion)" PackagePrefix="$(PackageId)" PackagePath="$(LocalNuGetRepository)">
+      <Output TaskParameter="NewBuild" PropertyName="PackageVersion" />
+    </IncrementLatestPackageBuild>
+    <Message Importance="high" Text="New Package Version for $(PackageId) = $(PackageVersion)" />
+  </Target>
+</Project>

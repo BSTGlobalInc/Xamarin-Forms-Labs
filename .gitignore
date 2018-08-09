@@ -257,3 +257,6 @@ tools/Addins/
 tools/Cake/
 tools/GitVersion.CommandLine
 tools/nuget.exe
+
+# Local Overrides
+src/Directory.LocalOverrides.props
