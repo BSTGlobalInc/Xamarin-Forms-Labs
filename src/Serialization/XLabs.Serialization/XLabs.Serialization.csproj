@@ -3,6 +3,8 @@
   <PropertyGroup>
     <!--TargetFrameworkProfile>Profile111</TargetFrameworkProfile-->
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Description>BST Packaged XLabs.Serialization</Description>
+    <PackageId>BST.XLabs.Serialization</PackageId>
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="Properties\" />

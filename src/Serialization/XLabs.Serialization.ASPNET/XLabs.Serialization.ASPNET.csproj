@@ -2,6 +2,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net471</TargetFramework>
+    <Description>BST Packaged XLabs.Serialization.ASPNET</Description>
+    <PackageId>BST.XLabs.Serialization.ASPNET</PackageId>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\XLabs.Serialization\XLabs.Serialization.csproj">

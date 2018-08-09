@@ -8,9 +8,11 @@
     <Product>XLabs</Product>
     <Authors>XLabs Team and BST Global</Authors>
     <LocalNuGetRepository>C:\Packages\</LocalNuGetRepository>
+    <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="NuGet.Build.Packaging" Version="0.2.2" />
+    <!--PackageReference Include="NuGet.Build.Packaging" Version="0.2.2" /-->
   </ItemGroup>
   <Import Project="$(MSBuildThisFileDirectory)Directory.LocalOverrides.props" Condition="Exists('$(MSBuildThisFileDirectory)Directory.LocalOverrides.props')" />
 </Project>

@@ -3,6 +3,8 @@
   <PropertyGroup>
     <!--TargetFrameworkProfile>Profile111</TargetFrameworkProfile-->
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Description>BST Packaged XLabs.Caching.Sqlite</Description>
+    <PackageId>BST.XLabs.Caching.Sqlite</PackageId>
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .NET Framework is automatically included -->

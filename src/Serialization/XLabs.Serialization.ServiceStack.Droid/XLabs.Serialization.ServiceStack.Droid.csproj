@@ -6,6 +6,8 @@
     <DefineConstants>$(DefineConstants);ANDROID</DefineConstants>
     <AssemblyName>XLabs.Serialization.ServiceStack</AssemblyName>
     <RootNamespace>XLabs.Serialization.ServiceStack</RootNamespace>
+    <Description>BST Packaged XLabs.Serialization.ServiceStack.Droid</Description>
+    <PackageId>BST.XLabs.Serialization.ServiceStack.Droid</PackageId>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\XLabs.Serialization\XLabs.Serialization.csproj">

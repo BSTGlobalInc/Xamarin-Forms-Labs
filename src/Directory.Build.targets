@@ -1,7 +1,7 @@
 <Project>
-  <Target Name="PublishPackages" AfterTargets="AfterBuild" Condition="'$(ProjectExt)' == '.nuproj' and Exists('$(TargetPath)')">
+  <Target Name="PublishPackages" AfterTargets="Pack" Condition="Exists('$(OutputPath)..\$(PackageId).$(PackageVersion).nupkg') and '$(RunInTeamCity)' != 'True'">
     <Copy
-        SourceFiles="$(TargetPath)"
+        SourceFiles="$(OutputPath)..\$(PackageId).$(PackageVersion).nupkg"
         SkipUnchangedFiles="true"
         DestinationFolder="$(LocalNuGetRepository)"
         />
@@ -35,7 +35,7 @@ NewBuild = BaseVersion + "." + (
     </Task>
   </UsingTask>
 
-  <Target Name="DeterminePackageVersion" BeforeTargets="BeforeBuild" Condition="'$(ProjectExt)' == '.nuproj' and '$(PackageId)' != '' and '$(RunInTeamCity)' != 'True'">
+  <Target Name="DeterminePackageVersion" BeforeTargets="GenerateNuspec" Condition="'$(RunInTeamCity)' != 'True'">
     <IncrementLatestPackageBuild BaseVersion="$(BranchBaseVersion)" PackagePrefix="$(PackageId)" PackagePath="$(LocalNuGetRepository)">
       <Output TaskParameter="NewBuild" PropertyName="PackageVersion" />
     </IncrementLatestPackageBuild>

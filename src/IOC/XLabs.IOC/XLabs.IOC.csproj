@@ -4,11 +4,9 @@
   <PropertyGroup>
     <!--TargetFrameworkProfile>Profile111</TargetFrameworkProfile-->
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Description>BST Packaged XLabs.IOC</Description>
+    <PackageId>BST.XLabs.IOC</PackageId>
   </PropertyGroup>
-  <ItemGroup>
-    <PackageReference Include="MSBuild.Sdk.Extras" Version="1.5.4" />
-    <PackageReference Include="NuGet.Build.Packaging" Version="0.2.2" />
-  </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
   </ItemGroup>

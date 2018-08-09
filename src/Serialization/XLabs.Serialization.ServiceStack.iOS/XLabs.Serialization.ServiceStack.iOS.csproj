@@ -4,6 +4,8 @@
     <TargetFramework>xamarinios10</TargetFramework>
     <DefineConstants>$(DefineConstants);__UNIFIED__;__MOBILE__;__IOS__;MONOTOUCH</DefineConstants>
     <AssemblyName>XLabs.Serialization.ServiceStack</AssemblyName>
+    <Description>BST Packaged XLabs.Serialization.ServiceStack.iOS</Description>
+    <PackageId>BST.XLabs.Serialization.ServiceStack.iOS</PackageId>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\XLabs.Serialization\XLabs.Serialization.csproj">

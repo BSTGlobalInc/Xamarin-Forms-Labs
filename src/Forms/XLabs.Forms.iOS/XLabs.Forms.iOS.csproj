@@ -3,6 +3,8 @@
   <PropertyGroup>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
     <TargetFramework>xamarinios10</TargetFramework>
+    <Description>BST Packaged XLabs.Forms.iOS</Description>
+    <PackageId>BST.XLabs.Forms.iOS</PackageId>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Core\XLabs.Core.csproj">

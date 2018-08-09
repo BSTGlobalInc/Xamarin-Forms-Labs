@@ -2,6 +2,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Description>BST Packaged XLabs.Core</Description>
+    <PackageId>BST.XLabs.Core</PackageId>
     <!-- Profile111 -->
   </PropertyGroup>
 </Project>

@@ -5,6 +5,8 @@
     <AssemblyName>XLabs.Platform.iOS</AssemblyName>
     <TargetFramework>xamarinios10</TargetFramework>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Description>BST Packaged XLabs.Platform.iOS</Description>
+    <PackageId>BST.XLabs.Platform.iOS</PackageId>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Core\XLabs.Core.csproj">

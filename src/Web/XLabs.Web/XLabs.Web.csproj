@@ -3,6 +3,8 @@
   <PropertyGroup>
     <!--TargetFrameworkProfile>Profile111</TargetFrameworkProfile-->
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Description>BST Packaged XLabs.Web</Description>
+    <PackageId>BST.XLabs.Web</PackageId>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Core\XLabs.Core.csproj" />

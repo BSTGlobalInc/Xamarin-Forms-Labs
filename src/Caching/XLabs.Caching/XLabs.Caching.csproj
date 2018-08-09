@@ -3,6 +3,8 @@
   <PropertyGroup>
     <!--TargetFrameworkProfile>Profile111</TargetFrameworkProfile-->
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Description>BST Packaged XLabs.Caching</Description>
+    <PackageId>BST.XLabs.Caching</PackageId>
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="Properties\" />

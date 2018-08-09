@@ -4,6 +4,8 @@
     <!--TargetFrameworkProfile>Profile111</TargetFrameworkProfile-->
     <TargetFramework>net471</TargetFramework>
     <AssemblyName>XLabs.Serialization.ServiceStack</AssemblyName>
+    <Description>BST Packaged XLabs.Serialization.ServiceStack.Net471</Description>
+    <PackageId>BST.XLabs.Serialization.ServiceStack.Net471</PackageId>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\XLabs.Serialization\XLabs.Serialization.csproj">
