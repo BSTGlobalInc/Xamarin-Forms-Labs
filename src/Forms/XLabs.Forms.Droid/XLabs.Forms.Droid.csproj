@@ -4,7 +4,7 @@
     <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
     <!--AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk-->
-    <TargetFramework>monoandroid71</TargetFramework>
+    <TargetFramework>monoandroid81</TargetFramework>
     <Description>BST Packaged XLabs.Forms.Droid</Description>
     <PackageId>BST.XLabs.Forms.Droid</PackageId>
   </PropertyGroup>

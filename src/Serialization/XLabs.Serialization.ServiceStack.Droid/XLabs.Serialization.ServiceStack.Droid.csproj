@@ -2,7 +2,7 @@
 <Project Sdk="MSBuild.Sdk.Extras">
   <PropertyGroup>
     <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
-    <TargetFramework>monoandroid71</TargetFramework>
+    <TargetFramework>monoandroid81</TargetFramework>
     <DefineConstants>$(DefineConstants);ANDROID</DefineConstants>
     <AssemblyName>XLabs.Serialization.ServiceStack</AssemblyName>
     <RootNamespace>XLabs.Serialization.ServiceStack</RootNamespace>

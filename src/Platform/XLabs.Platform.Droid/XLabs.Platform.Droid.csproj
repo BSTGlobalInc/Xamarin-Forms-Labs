@@ -4,7 +4,7 @@
     <RootNamespace>XLabs.Platform</RootNamespace>
     <AssemblyName>XLabs.Platform.Droid</AssemblyName>
     <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
-    <TargetFramework>monoandroid71</TargetFramework>
+    <TargetFramework>monoandroid81</TargetFramework>
     <Description>BST Packaged XLabs.Platform.Droid</Description>
     <PackageId>BST.XLabs.Platform.Droid</PackageId>
   </PropertyGroup>
